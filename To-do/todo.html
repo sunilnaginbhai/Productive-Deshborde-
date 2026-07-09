@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Todo</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="container">
+
+    <header>
+
+        <div class="left">
+
+            <i class="fa-solid fa-arrow-left" id="back"></i>
+
+            <h1>To-Do</h1>
+
+        </div>
+        
+        <div class="right">
+
+            <button id="undo">
+                <i class="fa-solid fa-rotate-left"></i>
+                Undo
+            </button>
+
+            <button id="redo">
+                Redo
+                <i class="fa-solid fa-rotate-right"></i>
+            </button>
+            
+
+        </div>
+          <div class="theme">
+
+                <button id="themeBtn">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                </button>
+
+            </div>
+
+    </header>
+
+
+    <div class="content">
+
+        <section class="tasks">
+
+            <div class="search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                type="text"
+                id="search"
+                placeholder="Search Task">
+
+            </div>
+
+            <ul id="taskList">
+
+                <li>
+
+                    <span class="number">1</span>
+
+                    <div class="task">
+                        <p>My Tasks</p>
+                    </div>
+
+                </li>
+
+                <li>
+
+                    <span class="number">2</span>
+
+                    <div class="task">
+                        <p>Design Review</p>
+                    </div>
+
+                </li>
+
+                <li>
+
+                    <span class="number">3</span>
+
+                    <div class="task">
+                        <p>Send Weekly Report</p>
+                    </div>
+
+                </li>
+
+
+            </ul>
+
+        </section>
+
+        <aside>
+
+            <button id="addBtn">
+                ADD
+                <span>+</span>
+            </button>
+            
+
+
+            <div class="calendar">
+
+                <div class="calendar-header">
+
+                    <h2 id="monthYear"></h2>
+
+                    <div>
+
+                        <button id="prev">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </button>
+
+                        <button id="next">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="weekdays">
+
+                    <span>S</span>
+                    <span>M</span>
+                    <span>T</span>
+                    <span>W</span>
+                    <span>T</span>
+                    <span>F</span>
+                    <span>S</span>
+
+                </div>
+
+                <div id="calendar"></div>
+
+
+            </div>
+            
+
+
+        </aside>
+
+    </div>
+
+</div>
+
+<script src="todo.js"></script>
+
+</body>
+</html>

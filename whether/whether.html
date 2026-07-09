@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whether</title>
+    <link rel="stylesheet" href="whether.css">
+     <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=location_on" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=water_drop" />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=air" /> -->
+</head>
+<body>
+     <div id="container">
+      <div id="top">
+            <input type="text" class="input-city" placeholder="Search your City">
+            <button class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+     </div>
+     <!-- Middle Section -->
+    <div id="weather" class="mid">
+
+    <div class="top-info">
+        <div class="location">
+            <i class="fa-solid fa-location-dot fa-bounce" style="color: rgb(177, 151, 252);"></i>
+            <span class="city">Mumbai</span>
+        </div>
+
+        <div class="date">
+            Thu, 09 Aug
+        </div>
+    </div>
+
+    <div class="weather-main">
+
+        <div class="weather-icon">
+            <img  class="weather-Img" src="/image/Whether-svgs/clouds.svg" alt="">
+        </div>
+
+        <div class="weather-details">
+            <h1 class="temp">30°C</h1>
+            <p class="condition">Clouds</p>
+        </div>
+
+    </div>
+
+    <div class="weather-extra">
+
+        <div class="card">
+            <div>
+                <h4>Humidity</h4>
+                <p class="humidityum">74%</p>
+            </div>
+            <div>
+            <i class="fa-solid fa-droplet fa-spin-snap" style="color: rgb(0, 80, 143);"></i>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <h4>Wind Speed</h4>
+                <p class="wind-speed">4.12 m/s</p>
+            </div>
+            <div>
+          <i class="fa-solid fa-wind fa-float" style="color: rgb(0, 80, 143);"></i>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    <!-- Bottom Forecast -->
+    <div id="forecast" class="bot">
+
+    <div class="forecast-card">
+
+        <h4>Aug 09</h4>
+
+        <img src="/image/Whether-svgs/atmosphere.svg">
+
+        <p>Cloudy</p>
+
+        <span>28°C</span>
+
+    </div>
+
+    <div class="forecast-card">
+
+        <h4>Aug 10</h4>
+
+        <img src="/image/Whether-svgs/clear.svg">
+
+        <p>Rain</p>
+
+        <span>27°C</span>
+
+    </div>
+
+    <div class="forecast-card">
+
+        <h4>Aug 11</h4>
+
+        <img src="/image/Whether-svgs/clouds.svg">
+
+        <p>Sunny</p>
+
+        <span>31°C</span>
+
+    </div>
+
+    <div class="forecast-card">
+
+        <h4>Aug 12</h4>
+
+        <img src="/image/Whether-svgs/drizzle.svg">
+
+        <p>Clouds</p>
+
+        <span>29°C</span>
+
+    </div>
+    <div class="forecast-card">
+        <h4>Aug 12</h4>
+        <img src="/image/Whether-svgs/rain.svg">
+        <p>Clouds</p>
+        <span>29°C</span>
+
+    </div>
+
+    </div>
+
+    </div>
+</div>
+    <script src="whether.js"></script>
+</body>
+</html>
