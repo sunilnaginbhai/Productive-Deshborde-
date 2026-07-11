@@ -11,33 +11,39 @@
 </head>
 <body>
     <img src="image/pexels-jess-vide-5007325.jpg" alt="" srcset="" id="background">
-    <video id="back-video" autoplay loop muted  >
-        <source id="video-source"  src="" type="video/mp4">
+    <video id="back-video" muted>
+        <source id="video-source" src="" type="video/mp4">
     </video>
     <div id="container">
 
         <div id="sidebar" class="all-card">
             <div class="menu">
-                <i class="fa-solid fa-bars-staggered" style="color: rgb(0, 0, 0); width:35px; height: 35px;"></i>
+                <i class="fa-solid fa-bars-staggered"></i>
             </div>
             <div class="features">
-                <div id="icon1">
-                    <i   class="fa-solid fa-cloud-rain" style="color: #87CEEB;width:40px; height: 40px;"></i>
+                <div id="icon1" class="sidebar-icon " title="Weather">
+                    <i class="fa-solid fa-cloud-rain "></i>
+                    <span class="tooltip">Weather</span>
                 </div>
-                <div id="icon2">
-                 <i  class="fa-solid fa-calendar-check" style="color: rgb(5, 0, 164);width:40px; height: 40px;"></i>
+                <div id="icon2" class="sidebar-icon" title="Daily Planner">
+                 <i class="fa-solid fa-calendar-check "></i>
+                 <span class="tooltip">Planner</span>
                 </div>
-                <div id="icon3">
-                    <i  class="fa-solid fa-clock" style="color: #F1C40F;width:40px; height: 40px;"></i>
+                <div id="icon3" class="sidebar-icon" title="Pomodoro">
+                    <i class="fa-solid fa-clock "></i>
+                    <span class="tooltip">Pomodoro</span>
                 </div>
-                <div id="icon4">
-                    <i  class="fa-solid fa-calendar" style="color: #4285F4;width:40px; height: 40px;"></i>
+                <div id="icon4" class="sidebar-icon" title="To-Do">
+                    <i class="fa-solid fa-calendar "></i>
+                    <span class="tooltip">To-Do</span>
                 </div>
-                <div id="icon5">
-                    <i  class="fa-solid fa-bullseye" style="color: #0F9D58; width:40px; height: 40px;"></i>
+                <div id="icon5" class="sidebar-icon" title="Goals">
+                    <i class="fa-solid fa-bullseye "></i>
+                    <span class="tooltip">Goals</span>
                 </div>
-                <div id="icon6">
-                    <i  class="fa-solid fa-ellipsis" style="color: rgb(0, 0, 0); width:40px; height: 40px;"></i>
+                <div id="icon6" class="sidebar-icon" title="More">
+                    <i class="fa-solid fa-ellipsis "></i>
+                    <span class="tooltip">More</span>
                 </div>
             </div>
         </div>
@@ -49,46 +55,98 @@
             <iframe  id="date"  src="https://free.timeanddate.com/clock/iahpt79r/n423/fs45/fc666/tct/pct/ftb/tt1" frameborder="0" width="603" height="54" allowtransparency="true"></iframe>
              <iframe  id="clock" src="https://free.timeanddate.com/clock/iahppvek/n423/szw190/szh190/hbw0/cf100/hnceee" frameborder="0" width="190" height="190"></iframe>      
         </div>
-        <div id="card1" class="all-card">
-            <h1>Wether</h1> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-            <img src="/image/Whether-svgs/clouds.svg" alt="" srcset=""> 
+        <div id="card1" class="all-card feature-card">
+            <div class="card-content">
+                <div class="card-icon-wrapper">
+                    <img src="/image/Whether-svgs/clouds.svg" alt="Weather" class="card-img"> 
+                </div>
+                <div class="card-text">
+                    <h1>Weather</h1>
+                    <p>Check the forecast</p>
+                </div>
+            </div>
+            <div class="card-overlay"></div>
         </div>
-        <div id="card2" class="all-card">
-            <h1>Daily Planner </h1> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-            <img style="width: 70px; height:70px;"  src="https://cdn-icons-png.flaticon.com/512/17487/17487679.png" alt="" srcset="">
+        <div id="card2" class="all-card feature-card">
+            <div class="card-content">
+                <div class="card-icon-wrapper">
+                    <img src="https://cdn-icons-png.flaticon.com/512/17487/17487679.png" alt="Planner" class="card-img"> 
+                </div>
+                <div class="card-text">
+                    <h1>Daily Planner</h1>
+                    <p>Plan your day</p>
+                </div>
+            </div>
+            <div class="card-overlay"></div>
         </div>
-        <div id="card3" class="all-card">
-            <h1>To-Do</h1>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-            <img style="width: 60px; height:60px;"    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Microsoft_To-Do_icon.svg/3840px-Microsoft_To-Do_icon.svg.png" alt="" srcset="">
+        <div id="card3" class="all-card feature-card">
+            <div class="card-content">
+                <div class="card-icon-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Microsoft_To-Do_icon.svg/3840px-Microsoft_To-Do_icon.svg.png" alt="To-Do" class="card-img"> 
+                </div>
+                <div class="card-text">
+                    <h1>To-Do</h1>
+                    <p>Manage your tasks</p>
+                </div>
+            </div>
+            <div class="card-overlay"></div>
         </div>
-        <div id="card4" class="all-card">
-            <h1>Daily Goals</h1>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-            <img  style="width: 60px; height:60px;"  src="https://cdn-icons-png.flaticon.com/512/4624/4624170.png" alt="" srcset="">
+        <div id="card4" class="all-card feature-card">
+            <div class="card-content">
+                <div class="card-icon-wrapper">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4624/4624170.png" alt="Goals" class="card-img"> 
+                </div>
+                <div class="card-text">
+                    <h1>Daily Goals</h1>
+                    <p>Set your targets</p>
+                </div>
+            </div>
+            <div class="card-overlay"></div>
         </div>
-        <div id="card5" class="all-card">
-           <h1>Pomodoro</h1>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-            <img style="width: 60px; height:60px;" src="https://freesvg.org/img/pomodorotimer.png" alt="" srcset="">
+        <div id="card5" class="all-card feature-card">
+            <div class="card-content">
+                <div class="card-icon-wrapper">
+                    <img src="https://freesvg.org/img/pomodorotimer.png" alt="Pomodoro" class="card-img"> 
+                </div>
+                <div class="card-text">
+                    <h1>Pomodoro</h1>
+                    <p>Focus timer</p>
+                </div>
+            </div>
+            <div class="card-overlay"></div>
         </div>
-        <div id="card6" class="all-card">
-            <h1>For More</h1>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
-            <img style="width: 60px; height:60px;"  src="https://www.svgrepo.com/show/457328/more.svg" alt="" srcset="">
+        <div id="card6" class="all-card feature-card">
+            <div class="card-content">
+                <div class="card-icon-wrapper">
+                    <img src="https://www.svgrepo.com/show/457328/more.svg" alt="More" class="card-img"> 
+                </div>
+                <div class="card-text">
+                    <h1>More</h1>
+                    <p>Explore features</p>
+                </div>
+            </div>
+            <div class="card-overlay"></div>
         </div>
         <div id="right" class="all-card">
             <div class="dark">
-                 <button class="dark-btn"></button>
+                 <button class="dark-btn" title="Toggle Dark Mode"></button>
             </div>
             <div class="theam">
-                <button id="th1">
-                    theme 1
+                <button id="th1" class="theme-btn">
+                    <i class="fa-solid fa-palette"></i>
+                    Theme 1
                 </button>
-                <button id="th2">
-                    theme 2
+                <button id="th2" class="theme-btn">
+                    <i class="fa-solid fa-palette"></i>
+                    Theme 2
                 </button>
-                <button id="alltheme">
-                    ALL theam
+                <button id="alltheme" class="theme-btn">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    Random
                 </button>
-                <button id="video-b">
-                   play Video
+                <button id="video-b" class="theme-btn video-btn">
+                   <i class="fa-solid fa-play"></i>
+                   <span>Video</span>
                 </button>
             </div>
         </div>
