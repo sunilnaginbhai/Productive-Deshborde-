@@ -1,29 +1,7 @@
-let modeBtn=document.querySelector(".mode-btn");
 let body=document.body;
-
-let ismode=false;
-
-modeBtn.addEventListener("click",()=>{
-    ismode=!ismode;
-
-    if(ismode){
-    body.style.background = "#d9dadc";
-    }else{
-       body.style.background="#0F172A"
-    }
-})
-
-
-
-
-
 
 let  taskField=document.querySelector(".task-field");
 let addTaskBtn=document.querySelector(".add-task-btn");
-
-
-
-
 
 
 let task="";
@@ -135,4 +113,5 @@ notesTextarea.addEventListener("input", (e) => {
                     <button class="task-action-btn">⋮</button>
                 </div>` 
 })
+
 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Goals</title>
+    <link rel="stylesheet" href="goals.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+</head>
+<body>
+
+    
+
+    
+    <div class="goal-popup">
+
+        <div class="popup">
+
+            <!-- Close Button -->
+            <button class="close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Header -->
+            <div class="header">
+
+                <div class="header-left">
+
+                    <div class="icon-box">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+
+                    <div>
+
+                        <span class="sub-title">
+                            TARGET CONTROL
+                        </span>
+
+                        <h1>
+                            Daily Goals
+                        </h1>
+
+                    </div>
+
+                </div>
+
+                <div class="progress-count">
+                    <span id="completedCount">
+                        0 of 0 Completed
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- Progress -->
+            <div class="progress">
+
+                <div class="progress-bar" id="progressBar"></div>
+
+            </div>
+
+            <!-- Input -->
+            <div class="input-box">
+
+                <input
+                    type="text"
+                    id="goalInput"
+                    placeholder="Set a new daily target..."
+                >
+
+                <button id="addGoal">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+            </div>
+
+            <!-- Goals -->
+            <div id="goalList" class="goal-list">
+
+                <!-- JS will create goals here -->
+
+            </div>
+
+            <!-- Empty -->
+            <div class="empty" id="emptyState">
+
+                <i class="fa-regular fa-clipboard"></i>
+
+                <p>
+                    No goals set for today.
+                    Add your first target above!
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="goals.js"></script>
+
+</body>
+</html>

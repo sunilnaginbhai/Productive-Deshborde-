@@ -16,7 +16,7 @@ todo.addEventListener("click", () => {
 //2
 document.addEventListener("keydown", (e) => {
     if (e.key === "2" || e.key == "altkey") {
-        tod.click();
+        todo.click();
     }
 });
 
@@ -62,18 +62,16 @@ more.addEventListener("click", () => {
 //6
 document.addEventListener("keydown", (e) => {
     if (e.key === "6" || e.key == "altkey") {
-        daily.click();
+        more.click();
     }
 });
 
 const darkbtn = document.querySelector(".dark-btn");
 const body = document.body;
-const bg = document.querySelector("#background");
-const backVideo = document.querySelector("#back-video");
+
 
 let isDark = localStorage.getItem("darkMode") === "true";
 
-// Apply saved theme on load
 if (isDark) {
     enableDarkMode();
 } else {
@@ -94,22 +92,15 @@ darkbtn.addEventListener("click", () => {
 function enableDarkMode() {
     darkbtn.style.backgroundImage = 'url("/image/sun.png")';
     body.style.backgroundColor = "#0f172a";
-    bg.style.opacity = "0";
-    backVideo.style.opacity = "0";
     document.documentElement.style.backgroundColor = "#000";
 }
 
 function disableDarkMode() {
     darkbtn.style.backgroundImage = 'url("/image/night.png")';
     body.style.backgroundColor = "transparent";
-    bg.style.opacity = "1";
-    if (backVideo.style.display === "block") {
-        backVideo.style.opacity = "1";
-    }
     document.documentElement.style.backgroundColor = "transparent";
 }
 
-// ===== THEME SWITCHING =====
 let back = document.querySelector("#background");
 let th1 = document.querySelector("#th1");
 let th2 = document.querySelector("#th2");
@@ -127,7 +118,6 @@ let themes = [
     "image/seaq68-river-2951997.jpg",
 ];
 
-// Add smooth transition to background
 back.style.transition = "opacity 0.5s ease-in-out";
 
 function switchTheme(themeIndex) {
@@ -161,7 +151,6 @@ alltheme.addEventListener("click", () => {
     switchTheme(counter);
 });
 
-// ===== SIDEBAR ICON INTERACTIONS =====
 document.querySelectorAll(".sidebar-icon").forEach((icon) => {
     icon.addEventListener("mouseenter", () => {
         icon.style.transform = "scale(1.1)";
@@ -171,7 +160,6 @@ document.querySelectorAll(".sidebar-icon").forEach((icon) => {
     });
 });
 
-// ===== CARD HOVER EFFECTS =====
 document.querySelectorAll(".feature-card").forEach((card) => {
     card.addEventListener("mouseenter", () => {
         card.style.transform = "translateY(-8px)";
@@ -181,14 +169,12 @@ document.querySelectorAll(".feature-card").forEach((card) => {
     });
 });
 
-// ===== KEYBOARD NAVIGATION =====
 document.addEventListener("keydown", (e) => {
     if (e.key === "d" || e.key === "D") {
         darkbtn.click();
     }
 });
 
-// ===== SMOOTH PAGE LOAD ANIMATION =====
 
 window.addEventListener("load", () => {
     document.body.style.animation = "fadeIn 0.5s ease-in";
@@ -202,8 +188,6 @@ window.addEventListener("load", () => {
     // document.body.style.animation = "fadeIn 3s ease-in";
 
 // });
-
-// ===== RESPONSIVE MENU =====
 const menuIcon = document.querySelector(".menu");
 const sidebar = document.querySelector("#sidebar");
 const features = document.querySelector(".features");
@@ -231,7 +215,6 @@ menuIcon.addEventListener("click", (e) => {
     }
 });
 
-// Close menu when clicking outside
 document.addEventListener("click", () => {
     if (menuOpen) {
         menuOpen = false;
@@ -241,104 +224,7 @@ document.addEventListener("click", () => {
     }
 });
 
-// ===== VIDEO PLAYBACK =====
-let video = [
-    "Videos/16154140_1920_1080_30fps.mp4",
-    "Videos/3209989-uhd_3840_2160_25fps.mp4",
-    "Videos/3736703-uhd_3840_2160_24fps.mp4",
-    "Videos/6514282-hd_1920_1080_30fps.mp4",
-    "Videos/12719557-uhd_3840_2160_25fps.mp4",
-    "Videos/15450104_1920_1080_30fps.mp4",
-    "Videos/15957274_3840_2160_60fps.mp4"
-];
 
-let videoCount = 0;
-let isVideoPlaying = false;
-
-// Only attach event listener if videobtn exists
-if (videobtn) {
-    videobtn.addEventListener("click", (event) => {
-        event.stopPropagation();
-    
-    if (!isVideoPlaying) {
-        // Start video
-        isVideoPlaying = true;
-        
-        // Add video to viewport
-        backVideo.classList.add("visible");
-        const container = document.querySelector("#container");
-        container.classList.add("video-playing");
-        
-        // Update button state
-        videobtn.classList.add("active");
-        const icon = videobtn.querySelector("i");
-        icon.classList.remove("fa-play");
-        icon.classList.add("fa-pause");
-        
-        videoCount++;
-        if (videoCount >= video.length) {
-            videoCount = 0;
-        }
-        
-        // Load and play video
-        videoSource.src = video[videoCount];
-        backVideo.load();
-        const playPromise = backVideo.play();
-        
-        if (playPromise !== undefined) {
-            playPromise.catch((error) => {
-                console.error("Video playback error:", error);
-                // Reset state if play fails
-                isVideoPlaying = false;
-                backVideo.classList.remove("visible");
-                container.classList.remove("video-playing");
-                videobtn.classList.remove("active");
-                icon.classList.add("fa-play");
-                icon.classList.remove("fa-pause");
-            });
-        }
-    } else {
-        // Stop video
-        closeVideo();
-    }
-    });
-}
-
-function closeVideo() {
-    if (!videobtn) return; // Guard clause
-    
-    isVideoPlaying = false;
-    backVideo.classList.remove("visible");
-    const container = document.querySelector("#container");
-    if (container) container.classList.remove("video-playing");
-    
-    // Update button state
-    videobtn.classList.remove("active");
-    const icon = videobtn.querySelector("i");
-    if (icon) {
-        icon.classList.add("fa-play");
-        icon.classList.remove("fa-pause");
-    }
-    
-    backVideo.pause();
-    backVideo.currentTime = 0;
-}
-
-// Close video when clicking outside (on container)
-document.addEventListener("click", (e) => {
-    if (isVideoPlaying && videobtn && !videobtn.contains(e.target) && e.target !== backVideo) {
-        closeVideo();
-    }
-});
-
-// Close video with Escape key
-document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && isVideoPlaying) {
-        closeVideo();
-    }
-});
-
-// ===== SIDEBAR ICON NAVIGATION =====
 let icon1 = document.querySelector("#icon1");
 let icon2 = document.querySelector("#icon2");
 let icon3 = document.querySelector("#icon3");
@@ -346,7 +232,6 @@ let icon4 = document.querySelector("#icon4");
 let icon5 = document.querySelector("#icon5");
 let icon6 = document.querySelector("#icon6");
 
-// Helper function to close menu and navigate
 function navigateTo(url) {
     if (menuOpen) {
         features.style.display = "none";
@@ -378,3 +263,39 @@ icon5.addEventListener("click",()=>{
 icon6.addEventListener("click",()=>{
     navigateTo("More/more.html")
 })
+
+
+const cursor = document.querySelector(".cursor");
+
+let mouseX = 0;
+let mouseY = 0;
+let posX = 0;
+let posY = 0;
+
+document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+function animateCursor() {
+    posX += (mouseX - posX) * 0.18;
+    posY += (mouseY - posY) * 0.18;
+
+    cursor.style.left = posX + "px";
+    cursor.style.top = posY + "px";
+
+    requestAnimationFrame(animateCursor);
+}
+
+animateCursor();
+
+document.querySelectorAll("button,a,.feature-card,.sidebar-icon,.theme-btn").forEach(el => {
+    el.addEventListener("mouseenter", () => cursor.classList.add("hover"));
+    el.addEventListener("mouseleave", () => cursor.classList.remove("hover"));
+});
+
+
+document.addEventListener("mousedown", () => cursor.classList.add("click"));
+document.addEventListener("mouseup", () => cursor.classList.remove("click"));
+
+
