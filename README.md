@@ -51,20 +51,28 @@ The project emphasizes performance, usability, responsive layouts, and smooth us
 
 > Add your screenshot here
 
-```
-/screenshots/dashboard.png
+``<img width="1365" height="641" alt="image" src="https://github.com/user-attachments/assets/c361fd55-b2cd-42d2-b99a-ce5e478c7cdd" />
+`
 ```
 
 ## Tasks
 
+##Wether APP
+<img width="1365" height="631" alt="image" src="https://github.com/user-attachments/assets/e4af9d6d-4ec6-48bf-8406-c6f762394334" />
+
 ```
-/screenshots/tasks.png
-```
+##TODO APP
+<img width="1097" height="637" alt="image" src="https://github.com/user-attachments/assets/d5ec999c-4349-422f-bb06-9659d1005d28" />
+
+##DAIly planer
+
+<img width="1365" height="631" alt="image" src="https://github.com/user-attachments/assets/faea33f9-233e-4ded-96b2-464f9c68c430" />
 
 ## Goals
 
 ```
-/screenshots/goals.png
+<img width="1194" height="620" alt="image" src="https://github.com/user-attachments/assets/9f7637c2-a196-4074-9494-827157ca1a3f" />
+
 ```
 
 ---
@@ -88,26 +96,7 @@ The project emphasizes performance, usability, responsive layouts, and smooth us
 
 ---
 
-# 📂 Project Structure
 
-```
-Productive-Deshborde/
-│
-├── public/
-│
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── assets/
-│   ├── hooks/
-│   ├── utils/
-│   ├── App.jsx
-│   └── main.jsx
-│
-├── package.json
-├── README.md
-└── vite.config.js
-```
 
 ---
 
@@ -166,8 +155,6 @@ https://productive-deshborde-6l3v.vercel.app/
 
 This project helped strengthen skills in:
 
-- React Component Architecture
-- State Management
 - Responsive UI Design
 - Modern CSS with Tailwind
 - Clean Folder Structure
